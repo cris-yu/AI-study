@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>测试链接</title>
+    <style>
+        /* 返回按钮样式 */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            background: #e9ecef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
+    <!-- 返回按钮 -->
+    <a href="index.html" class="back-button">
+        <i>←</i> 返回首页
+    </a>
     <h1>测试链接页面</h1>
     <p>请点击以下链接测试是否可以正常访问：</p>
     <ul>

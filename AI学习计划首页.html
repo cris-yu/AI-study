@@ -42,7 +42,32 @@
                 radial-gradient(circle at 40% 80%, rgba(79, 172, 254, 0.1) 0%, transparent 50%);
             min-height: 100vh;
         }
-        
+
+        /* 返回按钮样式 */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+
         h1 {
             text-align: center;
             background: var(--primary-gradient);
@@ -302,6 +327,10 @@
     </style>
 </head>
 <body>
+    <!-- 返回按钮 -->
+    <a href="index.html" class="back-button">
+        <i>←</i> 返回首页
+    </a>
     <h1>产品经理AI学习计划</h1>
     
     <div class="summary-section">
