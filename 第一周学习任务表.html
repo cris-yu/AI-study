@@ -59,7 +59,26 @@
             font-weight: bold;
         }
         .status-column {
-            width: 100px;
+            width: 150px;
+        }
+        .status-radio {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .save-message {
+            color: #27ae60;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        .status-completed {
+            background-color: #d4edda;
+        }
+        .status-in-progress {
+            background-color: #fff3cd;
+        }
+        .status-not-started {
+            background-color: #f8d7da;
         }
         .time-slot {
             width: 100px;
@@ -136,21 +155,33 @@
                 <td>阅读《人工智能极简史》，学习AI定义、发展历程</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-1-1" class="status-radio" value="completed" data-task="1-1"> 完成</label>
+                <label><input type="radio" name="status-1-1" class="status-radio" value="in-progress" data-task="1-1"> 进行中</label>
+                <label><input type="radio" name="status-1-1" class="status-radio" value="not-started" data-task="1-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>学习《Artificial Intelligence: A Modern Approach》第一章</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-1-2" class="status-radio" value="completed" data-task="1-2"> 完成</label>
+                <label><input type="radio" name="status-1-2" class="status-radio" value="in-progress" data-task="1-2"> 进行中</label>
+                <label><input type="radio" name="status-1-2" class="status-radio" value="not-started" data-task="1-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>绘制AI发展时间轴，标注重要里程碑</td>
                 <td class="duration">0.5小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-1-3" class="status-radio" value="completed" data-task="1-3"> 完成</label>
+                <label><input type="radio" name="status-1-3" class="status-radio" value="in-progress" data-task="1-3"> 进行中</label>
+                <label><input type="radio" name="status-1-3" class="status-radio" value="not-started" data-task="1-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周二 -->
@@ -160,21 +191,33 @@
                 <td>学习吴恩达《机器学习》课程第一周（监督学习部分）</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-2-1" class="status-radio" value="completed" data-task="2-1"> 完成</label>
+                <label><input type="radio" name="status-2-1" class="status-radio" value="in-progress" data-task="2-1"> 进行中</label>
+                <label><input type="radio" name="status-2-1" class="status-radio" value="not-started" data-task="2-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>阅读《Hands-On Machine Learning》第一章</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-2-2" class="status-radio" value="completed" data-task="2-2"> 完成</label>
+                <label><input type="radio" name="status-2-2" class="status-radio" value="in-progress" data-task="2-2"> 进行中</label>
+                <label><input type="radio" name="status-2-2" class="status-radio" value="not-started" data-task="2-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>用产品语言解释三种机器学习类型的区别</td>
                 <td class="duration">0.5小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-2-3" class="status-radio" value="completed" data-task="2-3"> 完成</label>
+                <label><input type="radio" name="status-2-3" class="status-radio" value="in-progress" data-task="2-3"> 进行中</label>
+                <label><input type="radio" name="status-2-3" class="status-radio" value="not-started" data-task="2-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周三 -->
@@ -184,21 +227,33 @@
                 <td>观看3Blue1Brown《神经网络》视频系列</td>
                 <td class="duration">1.5小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-3-1" class="status-radio" value="completed" data-task="3-1"> 完成</label>
+                <label><input type="radio" name="status-3-1" class="status-radio" value="in-progress" data-task="3-1"> 进行中</label>
+                <label><input type="radio" name="status-3-1" class="status-radio" value="not-started" data-task="3-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>阅读《Deep Learning》第一章</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-3-2" class="status-radio" value="completed" data-task="3-2"> 完成</label>
+                <label><input type="radio" name="status-3-2" class="status-radio" value="in-progress" data-task="3-2"> 进行中</label>
+                <label><input type="radio" name="status-3-2" class="status-radio" value="not-started" data-task="3-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>用比喻解释神经网络的工作原理</td>
                 <td class="duration">0.5小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-3-3" class="status-radio" value="completed" data-task="3-3"> 完成</label>
+                <label><input type="radio" name="status-3-3" class="status-radio" value="in-progress" data-task="3-3"> 进行中</label>
+                <label><input type="radio" name="status-3-3" class="status-radio" value="not-started" data-task="3-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周四 -->
@@ -208,21 +263,33 @@
                 <td>阅读《AI产品经理入门宝典》第二章（AI术语部分）</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-4-1" class="status-radio" value="completed" data-task="4-1"> 完成</label>
+                <label><input type="radio" name="status-4-1" class="status-radio" value="in-progress" data-task="4-1"> 进行中</label>
+                <label><input type="radio" name="status-4-1" class="status-radio" value="not-started" data-task="4-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>浏览AI Glossary by Google，补充术语理解</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-4-2" class="status-radio" value="completed" data-task="4-2"> 完成</label>
+                <label><input type="radio" name="status-4-2" class="status-radio" value="in-progress" data-task="4-2"> 进行中</label>
+                <label><input type="radio" name="status-4-2" class="status-radio" value="not-started" data-task="4-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>创建个人AI术语表（至少20个核心术语）</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-4-3" class="status-radio" value="completed" data-task="4-3"> 完成</label>
+                <label><input type="radio" name="status-4-3" class="status-radio" value="in-progress" data-task="4-3"> 进行中</label>
+                <label><input type="radio" name="status-4-3" class="status-radio" value="not-started" data-task="4-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周五 -->
@@ -232,21 +299,33 @@
                 <td>阅读《人工智能伦理》，学习AI伦理原则</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-5-1" class="status-radio" value="completed" data-task="5-1"> 完成</label>
+                <label><input type="radio" name="status-5-1" class="status-radio" value="in-progress" data-task="5-1"> 进行中</label>
+                <label><input type="radio" name="status-5-1" class="status-radio" value="not-started" data-task="5-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>弹性时间：复习本周内容或处理突发工作</td>
                 <td class="duration">2小时</td>
                 <td class="priority"><span class="priority-low">低</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-5-2" class="status-radio" value="completed" data-task="5-2"> 完成</label>
+                <label><input type="radio" name="status-5-2" class="status-radio" value="in-progress" data-task="5-2"> 进行中</label>
+                <label><input type="radio" name="status-5-2" class="status-radio" value="not-started" data-task="5-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>分析1个AI伦理问题案例（如算法偏见）</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-5-3" class="status-radio" value="completed" data-task="5-3"> 完成</label>
+                <label><input type="radio" name="status-5-3" class="status-radio" value="in-progress" data-task="5-3"> 进行中</label>
+                <label><input type="radio" name="status-5-3" class="status-radio" value="not-started" data-task="5-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周六 -->
@@ -256,21 +335,33 @@
                 <td>阅读《AI超级思维》，学习产品视角看AI</td>
                 <td class="duration">2小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-6-1" class="status-radio" value="completed" data-task="6-1"> 完成</label>
+                <label><input type="radio" name="status-6-1" class="status-radio" value="in-progress" data-task="6-1"> 进行中</label>
+                <label><input type="radio" name="status-6-1" class="status-radio" value="not-started" data-task="6-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>阅读《Build AI Products People Love》第一章</td>
                 <td class="duration">1.5小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-6-2" class="status-radio" value="completed" data-task="6-2"> 完成</label>
+                <label><input type="radio" name="status-6-2" class="status-radio" value="in-progress" data-task="6-2"> 进行中</label>
+                <label><input type="radio" name="status-6-2" class="status-radio" value="not-started" data-task="6-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>撰写短文：《产品经理为什么需要学习AI》</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-6-3" class="status-radio" value="completed" data-task="6-3"> 完成</label>
+                <label><input type="radio" name="status-6-3" class="status-radio" value="in-progress" data-task="6-3"> 进行中</label>
+                <label><input type="radio" name="status-6-3" class="status-radio" value="not-started" data-task="6-3" checked> 未开始</label>
+            </td>
             </tr>
             
             <!-- 周日 -->
@@ -280,21 +371,33 @@
                 <td>完成本周测试题（共3题）</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-7-1" class="status-radio" value="completed" data-task="7-1"> 完成</label>
+                <label><input type="radio" name="status-7-1" class="status-radio" value="in-progress" data-task="7-1"> 进行中</label>
+                <label><input type="radio" name="status-7-1" class="status-radio" value="not-started" data-task="7-1" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">下午</td>
                 <td>整理本周学习笔记，形成知识体系</td>
                 <td class="duration">2小时</td>
                 <td class="priority"><span class="priority-high">高</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-7-2" class="status-radio" value="completed" data-task="7-2"> 完成</label>
+                <label><input type="radio" name="status-7-2" class="status-radio" value="in-progress" data-task="7-2"> 进行中</label>
+                <label><input type="radio" name="status-7-2" class="status-radio" value="not-started" data-task="7-2" checked> 未开始</label>
+            </td>
             </tr>
             <tr>
                 <td class="time-slot">晚上</td>
                 <td>确定下周重点学习方向，制定下周计划</td>
                 <td class="duration">1小时</td>
                 <td class="priority"><span class="priority-medium">中</span></td>
-                <td class="status-column">□ 完成 □ 进行中 □ 未开始</td>
+                <td class="status-column">
+                <label><input type="radio" name="status-7-3" class="status-radio" value="completed" data-task="7-3"> 完成</label>
+                <label><input type="radio" name="status-7-3" class="status-radio" value="in-progress" data-task="7-3"> 进行中</label>
+                <label><input type="radio" name="status-7-3" class="status-radio" value="not-started" data-task="7-3" checked> 未开始</label>
+            </td>
             </tr>
         </tbody>
     </table>
@@ -315,13 +418,15 @@
         <div class="flex-item">
             <h3>周末复盘区域</h3>
             <h4>学习收获</h4>
-            <textarea style="width: 100%; height: 100px;" placeholder="请记录本周学习的主要收获..."></textarea>
+            <textarea id="learning-gains" style="width: 100%; height: 100px;" placeholder="请记录本周学习的主要收获..."></textarea>
             
             <h4>知识盲区</h4>
-            <textarea style="width: 100%; height: 100px;" placeholder="请记录本周发现的知识盲区..."></textarea>
+            <textarea id="knowledge-gaps" style="width: 100%; height: 100px;" placeholder="请记录本周发现的知识盲区..."></textarea>
             
             <h4>改进计划</h4>
-            <textarea style="width: 100%; height: 100px;" placeholder="请记录下周的改进计划..."></textarea>
+            <textarea id="improvement-plan" style="width: 100%; height: 100px;" placeholder="请记录下周的改进计划..."></textarea>
+            
+            <div class="save-message" id="review-save-message">✓ 已保存</div>
         </div>
     </div>
 
@@ -335,5 +440,117 @@
             <li>定期复盘，及时调整学习计划</li>
         </ul>
     </div>
+
+    <script>
+        // 保存学习状态到localStorage
+        function saveTaskStatus(taskId, status) {
+            const taskStatus = JSON.parse(localStorage.getItem('aiLearningTaskStatus') || '{}');
+            taskStatus[taskId] = status;
+            localStorage.setItem('aiLearningTaskStatus', JSON.stringify(taskStatus));
+            showSaveMessage();
+        }
+
+        // 从localStorage加载学习状态
+        function loadTaskStatus() {
+            const taskStatus = JSON.parse(localStorage.getItem('aiLearningTaskStatus') || '{}');
+            for (const [taskId, status] of Object.entries(taskStatus)) {
+                const radio = document.querySelector(`input[data-task="${taskId}"][value="${status}"]`);
+                if (radio) {
+                    radio.checked = true;
+                    updateRowStyle(radio, status);
+                }
+            }
+        }
+
+        // 保存复盘内容到localStorage
+        function saveReviewContent() {
+            const reviewContent = {
+                learningGains: document.getElementById('learning-gains').value,
+                knowledgeGaps: document.getElementById('knowledge-gaps').value,
+                improvementPlan: document.getElementById('improvement-plan').value
+            };
+            localStorage.setItem('aiLearningReviewContent', JSON.stringify(reviewContent));
+            showReviewSaveMessage();
+        }
+
+        // 从localStorage加载复盘内容
+        function loadReviewContent() {
+            const reviewContent = JSON.parse(localStorage.getItem('aiLearningReviewContent') || '{}');
+            if (reviewContent.learningGains) {
+                document.getElementById('learning-gains').value = reviewContent.learningGains;
+            }
+            if (reviewContent.knowledgeGaps) {
+                document.getElementById('knowledge-gaps').value = reviewContent.knowledgeGaps;
+            }
+            if (reviewContent.improvementPlan) {
+                document.getElementById('improvement-plan').value = reviewContent.improvementPlan;
+            }
+        }
+
+        // 显示保存成功消息
+        function showSaveMessage() {
+            const message = document.createElement('div');
+            message.className = 'save-message';
+            message.textContent = '✓ 状态已保存';
+            message.style.position = 'fixed';
+            message.style.top = '20px';
+            message.style.right = '20px';
+            message.style.backgroundColor = '#27ae60';
+            message.style.color = 'white';
+            message.style.padding = '10px 20px';
+            message.style.borderRadius = '5px';
+            message.style.zIndex = '1000';
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                message.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(message);
+                }, 300);
+            }, 2000);
+        }
+
+        // 显示复盘保存成功消息
+        function showReviewSaveMessage() {
+            const message = document.getElementById('review-save-message');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        }
+
+        // 更新行样式
+        function updateRowStyle(radio, status) {
+            const row = radio.closest('tr');
+            row.classList.remove('status-completed', 'status-in-progress', 'status-not-started');
+            row.classList.add(`status-${status}`);
+        }
+
+        // 事件监听器
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载保存的状态
+            loadTaskStatus();
+            loadReviewContent();
+            
+            // 添加单选按钮事件监听
+            const statusRadios = document.querySelectorAll('.status-radio');
+            statusRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const taskId = this.getAttribute('data-task');
+                    const status = this.value;
+                    saveTaskStatus(taskId, status);
+                    updateRowStyle(this, status);
+                });
+            });
+            
+            // 添加复盘内容事件监听
+            const reviewTextareas = document.querySelectorAll('#learning-gains, #knowledge-gaps, #improvement-plan');
+            reviewTextareas.forEach(textarea => {
+                textarea.addEventListener('input', function() {
+                    saveReviewContent();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
