@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品经理AI学习计划（1个月）</title>
+    <style>
+        /* 全局样式 */
+        * {{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }}
+
+        body {{
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }}
+
+        /* 返回按钮样式 */
+        .back-button {{
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }}
+
+        .back-button:hover {{
+            background: #f8f9fa;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }}
+
+        .back-button i {{
+            margin-right: 8px;
+        }}
+
+        /* 容器样式 */
+        .container {{
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }}
+
+        /* 标题样式 */
+        h1 {{
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }}
+
+        h2 {{
+            color: #34495e;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 2em;
+        }}
+
+        h3 {{
+            color: #2ecc71;
+            margin: 30px 0 15px;
+            font-size: 1.5em;
+        }}
+
+        h4 {{
+            color: #e74c3c;
+            margin: 20px 0 10px;
+            font-size: 1.2em;
+        }}
+
+        /* 段落样式 */
+        p {{
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+        }}
+
+        /* 列表样式 */
+        ul, ol {{
+            margin-bottom: 15px;
+            margin-left: 25px;
+        }}
+
+        li {{
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }}
+
+        /* 表格样式 */
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }}
+
+        th, td {{
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }}
+
+        th {{
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }}
+
+        tr:nth-child(even) {{
+            background-color: #f2f2f2;
+        }}
+
+        /* 分隔线 */
+        hr {{
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }}
+
+        /* 卡片样式 */
+        .card {{
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }}
+
+        /* 学习进度表 */
+        .progress-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .progress-table th {
+            background-color: #2ecc71;
+        }
+
+        /* 学习任务样式 */
+        .task {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {{
+            .container {{
+                padding: 20px;
+            }}
+
+            h1 {{
+                font-size: 2em;
+            }}
+
+            h2 {{
+                font-size: 1.7em;
+            }}
+
+            h3 {{
+                font-size: 1.4em;
+            }}
+
+            h4 {{
+                font-size: 1.2em;
+            }}
+
+            p, li {{
+                font-size: 1em;
+            }}
+
+            table {{
+                font-size: 0.9em;
+            }}
+
+            th, td {{
+                padding: 8px;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 返回按钮 -->
+        <a href="index.html" class="back-button">
+            <i>←</i> 返回首页
+        </a>
+        <h1>产品经理AI学习计划（1个月）</h1>
+<h2>学习计划概述</h2>
+<p>本计划专为<strong>初级产品经理</strong>设计，通过4周的系统学习，帮助你掌握当前主流AI技术（LLM、RAG、Prompt工程等），建立AI产品思维框架，能够独立完成AI产品的需求分析、设计和落地。</p>
+<h3>学习内容与产出物概览</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>学习内容</th>
+<th>产出物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1周：AI基础与工具</td>
+<td>• 学习LLM、Embedding、RAG、Agents基础概念<br>• 熟悉主流AI工具：OpenAI、Claude、Gemini、LangChain<br>• 练习Prompt工程：角色提示、逐步推理、思维链</td>
+<td>• 一套基础AI笔记<br>• 20个高质量Prompt模板</td>
+</tr>
+<tr>
+<td>第2周：AI产品方法论</td>
+<td>• 学习AI产品的需求挖掘方法（可行性评估：模型能力×数据×场景）<br>• 掌握AI产品的关键设计模式：Copilot、Chatbot、RAG知识库、内容生成、智能分析<br>• 学习数据流转流程：输入→模型→输出→评估→迭代</td>
+<td>• AI可行性评估文档<br>• 一个竞品分析文档（任选一个AI类产品）</td>
+</tr>
+<tr>
+<td>第3周：项目实战</td>
+<td>• 选择一个领域（如教育、效率工具、客服、营销）进行AI产品0→1设计<br>• 定义目标用户、核心场景、数据采集、模型调用方式<br>• 绘制关键流程图、数据流图、原型图</td>
+<td>• 完整PRD<br>• 原型图（Figma/Axure）</td>
+</tr>
+<tr>
+<td>第4周：求职冲刺</td>
+<td>• 准备AI产品作品集（包含1-2个项目）<br>• 复习常见AI PM面试题：模型理解、方案设计、技术可行性、评估指标<br>• 模拟面试3-5次</td>
+<td>• 求职简历（AI项目强化版）<br>• AI PM作品集（PDF两份）</td>
+</tr>
+</tbody>
+</table>
+<h3>学习目标</h3>
+<ol>
+<li><strong>建立现代AI基础认知</strong>：理解LLM、Embedding、RAG、Agents等核心概念，熟悉主流AI工具</li>
+<li><strong>掌握Prompt工程技能</strong>：学会设计高质量Prompt，提升与AI模型的交互效率</li>
+<li><strong>培养AI产品方法论</strong>：掌握AI产品可行性评估、设计模式和数据流转流程</li>
+<li><strong>具备AI产品实战能力</strong>：能够完成AI产品0→1设计，输出专业PRD和原型</li>
+<li><strong>提升求职竞争力</strong>：准备AI产品作品集，掌握常见面试技巧</li>
+</ol>
+<h3>学习方式</h3>
+<ul>
+<li><strong>每日学习时间</strong>：建议每天投入2-3小时</li>
+<li><strong>学习节奏</strong>：循序渐进，理论+实践结合</li>
+<li><strong>工具驱动学习</strong>：通过OpenAI、Claude、Gemini、LangChain等工具实践AI应用</li>
+<li><strong>产出导向</strong>：每周有明确的学习产出，形成个人作品集</li>
+</ul>
+<h2>第一周：AI基础与工具</h2>
+<h3>学习目标</h3>
+<ul>
+<li>理解LLM、Embedding、RAG、Agents等现代AI核心概念</li>
+<li>熟悉主流AI工具（OpenAI、Claude、Gemini、LangChain）的使用</li>
+<li>掌握Prompt工程的基本技巧</li>
+<li>建立AI术语体系，能够与技术团队有效沟通</li>
+</ul>
+<h3>每日学习计划</h3>
+<h4>第1天：现代AI基础认知</h4>
+<ul>
+<li><strong>学习内容</strong>：LLM（大语言模型）、Embedding（嵌入）、RAG（检索增强生成）、Agents（智能体）基础概念</li>
+<li><strong>推荐资源</strong>：</li>
+<li>OpenAI官方文档：Introduction to GPT（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>《生成式AI极简入门》（中文）- 难度：★☆☆☆☆，时长：2小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>绘制现代AI技术栈图谱</li>
+<li>总结各技术的核心应用场景</li>
+</ul>
+<h4>第2天：主流AI工具熟悉</h4>
+<ul>
+<li><strong>学习内容</strong>：OpenAI、Claude、Gemini、LangChain等工具的注册与基本使用</li>
+<li><strong>推荐资源</strong>：</li>
+<li>LangChain官方文档（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>AI工具使用指南（中文博客）- 难度：★☆☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>完成各工具的注册与API配置</li>
+<li>实现一个简单的LangChain应用（如文档问答）</li>
+</ul>
+<h4>第3天：Prompt工程基础</h4>
+<ul>
+<li><strong>学习内容</strong>：Prompt设计原则、角色提示法、逐步推理法</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《Prompt Engineering Guide》（英文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>OpenAI提示工程最佳实践（中文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计10个基础Prompt模板</li>
+<li>测试不同提示方式的效果差异</li>
+</ul>
+<h4>第4天：高级Prompt技巧</h4>
+<ul>
+<li><strong>学习内容</strong>：思维链（Chain of Thought）、树状思考（Tree of Thoughts）、few-shot学习</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《高级Prompt工程实战》（中文）- 难度：★★★☆☆，时长：2小时</li>
+<li>斯坦福CS224n课程：Prompt Engineering部分（英文视频）- 难度：★★★☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计5个高级Prompt模板</li>
+<li>用思维链方法解决复杂问题</li>
+</ul>
+<h4>第5天：AI术语体系构建</h4>
+<ul>
+<li><strong>学习内容</strong>：产品经理必备的AI术语（模型参数、上下文窗口、token、温度参数等）</li>
+<li><strong>推荐资源</strong>：</li>
+<li>AI Glossary by Google（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>《AI产品经理术语手册》（中文）- 难度：★☆☆☆☆，时长：2小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>创建个人AI术语表（至少30个核心术语）</li>
+<li>用产品场景解释关键术语</li>
+</ul>
+<h4>第6天：AI伦理与责任</h4>
+<ul>
+<li><strong>学习内容</strong>：生成式AI的伦理问题、偏见与公平性、隐私保护</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《人工智能伦理》（中文书籍）- 难度：★★☆☆☆，时长：2小时</li>
+<li>OpenAI伦理指南（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>分析1个生成式AI伦理问题案例</li>
+<li>思考如何在AI产品设计中体现伦理原则</li>
+</ul>
+<h4>第7天：第一周总结与产出</h4>
+<ul>
+<li><strong>学习内容</strong>：复习本周知识点，整理学习成果</li>
+<li><strong>学习产出</strong>：</li>
+<li>一套基础AI技术笔记</li>
+<li>20个高质量Prompt模板（涵盖基础和高级技巧）</li>
+<li><strong>学习任务</strong>：</li>
+<li>完善个人AI知识库</li>
+<li>准备下周产品方法论学习</li>
+</ul>
+<h2>第二周：AI产品方法论</h2>
+<h3>学习目标</h3>
+<ul>
+<li>掌握AI产品的需求挖掘与可行性评估方法</li>
+<li>熟悉AI产品的关键设计模式（Copilot、Chatbot、RAG等）</li>
+<li>理解AI产品的数据流转流程</li>
+<li>学会AI产品的竞品分析方法</li>
+</ul>
+<h3>每日学习计划</h3>
+<h4>第8天：AI产品需求挖掘</h4>
+<ul>
+<li><strong>学习内容</strong>：AI产品需求挖掘方法、可行性评估框架（模型能力 × 数据 × 场景）</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI产品经理实战指南》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《Designing AI Products》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计AI产品需求挖掘访谈提纲</li>
+<li>应用可行性框架评估一个AI产品idea</li>
+</ul>
+<h4>第9天：Copilot设计模式</h4>
+<ul>
+<li><strong>学习内容</strong>：Copilot模式的定义、应用场景、设计原则</li>
+<li><strong>推荐资源</strong>：</li>
+<li>GitHub Copilot官方文档（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>微软Copilot设计指南（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>分析3个优秀的Copilot产品案例</li>
+<li>设计一个工具类产品的Copilot功能</li>
+</ul>
+<h4>第10天：Chatbot与RAG设计模式</h4>
+<ul>
+<li><strong>学习内容</strong>：智能聊天机器人设计、RAG知识库构建</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《Chatbot设计实战》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《RAG系统设计指南》（英文）- 难度：★★★☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计一个智能客服Chatbot的对话流程</li>
+<li>规划一个企业知识库的RAG系统架构</li>
+</ul>
+<h4>第11天：内容生成与智能分析模式</h4>
+<ul>
+<li><strong>学习内容</strong>：AI内容生成、智能数据分析产品设计</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI内容产品设计》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《智能数据分析产品实战》（中文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计一个AI内容生成产品的功能模块</li>
+<li>规划一个智能数据分析产品的指标体系</li>
+</ul>
+<h4>第12天：AI数据流转流程</h4>
+<ul>
+<li><strong>学习内容</strong>：AI产品的数据流转：输入 → 模型 → 输出 → 评估 → 迭代</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《数据驱动的AI产品》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>谷歌AI数据最佳实践（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>绘制AI产品的数据流转流程图</li>
+<li>设计数据质量评估指标</li>
+</ul>
+<h4>第13天：AI产品竞品分析</h4>
+<ul>
+<li><strong>学习内容</strong>：AI产品竞品分析框架、评估维度</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI产品竞品分析指南》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>产品经理竞品分析课程（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>选择一个AI产品领域进行竞品分析</li>
+<li>撰写完整的竞品分析报告</li>
+</ul>
+<h4>第14天：第二周总结与产出</h4>
+<ul>
+<li><strong>学习内容</strong>：复习本周知识点，整理学习成果</li>
+<li><strong>学习产出</strong>：</li>
+<li>AI产品可行性评估文档（针对一个具体idea）</li>
+<li>AI产品竞品分析文档（任选一个领域）</li>
+<li><strong>学习任务</strong>：</li>
+<li>完善AI产品方法论知识库</li>
+<li>准备第三周项目实战</li>
+</ul>
+<h2>第三周：项目实战</h2>
+<h3>学习目标</h3>
+<ul>
+<li>选择一个领域进行AI产品0→1设计</li>
+<li>定义目标用户、核心场景、数据采集和模型调用方式</li>
+<li>绘制关键流程图、数据流图和原型图</li>
+<li>产出完整PRD和可交互原型</li>
+</ul>
+<h3>每日学习计划</h3>
+<h4>第15天：项目选题与背景分析</h4>
+<ul>
+<li><strong>学习内容</strong>：选择AI产品领域（教育、效率工具、客服、营销等）</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI产品创意集》（中文）- 难度：★☆☆☆☆，时长：1小时</li>
+<li>《AI Product Opportunities》（英文）- 难度：★☆☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>确定项目领域（如教育、效率工具、客服、营销等）</li>
+<li>撰写项目背景和目标</li>
+</ul>
+<h4>第16天：目标用户与核心场景定义</h4>
+<ul>
+<li><strong>学习内容</strong>：用户研究、核心场景梳理</li>
+<li><strong>推荐资源</strong>：</li>
+<li>用户访谈技巧（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>场景化设计方法（中文资料）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>定义目标用户画像</li>
+<li>梳理3-5个核心用户场景</li>
+</ul>
+<h4>第17天：数据采集方案设计</h4>
+<ul>
+<li><strong>学习内容</strong>：AI产品数据需求分析、数据采集方式</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI产品数据策略》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《Data Strategy for AI Products》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>设计数据采集方案</li>
+<li>定义数据质量要求</li>
+</ul>
+<h4>第18天：模型调用方式设计</h4>
+<ul>
+<li><strong>学习内容</strong>：选择合适的AI模型、API调用方式</li>
+<li><strong>推荐资源</strong>：</li>
+<li>OpenAI API文档（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>模型选型指南（中文）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>选择合适的AI模型（OpenAI、Claude、Gemini等）</li>
+<li>设计API调用流程</li>
+</ul>
+<h4>第19天：流程图与数据流图绘制</h4>
+<ul>
+<li><strong>学习内容</strong>：业务流程图、数据流图绘制</li>
+<li><strong>推荐资源</strong>：</li>
+<li>流程图绘制指南（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>数据流图设计方法（中文资料）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>绘制业务流程图</li>
+<li>绘制数据流图</li>
+</ul>
+<h4>第20天：PRD撰写</h4>
+<ul>
+<li><strong>学习内容</strong>：AI产品PRD撰写要点</li>
+<li><strong>推荐资源</strong>：</li>
+<li>AI产品PRD模板（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《Writing Great PRDs for AI Features》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>撰写完整的PRD文档</li>
+<li>包含功能需求、非功能需求、技术方案</li>
+</ul>
+<h4>第21天：原型设计与项目总结</h4>
+<ul>
+<li><strong>学习内容</strong>：Figma/XD原型设计</li>
+<li><strong>推荐资源</strong>：</li>
+<li>Figma AI产品原型教程（中文视频）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《Prototyping AI Products》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>绘制可交互原型图（Figma/AXURE）</li>
+<li>整理项目文档，准备项目展示</li>
+<li>产出物：完整PRD、原型图</li>
+</ul>
+<h2>第四周：求职冲刺</h2>
+<h3>学习目标</h3>
+<ul>
+<li>准备AI产品作品集（包含1-2个项目）</li>
+<li>复习常见AI PM面试题</li>
+<li>模拟面试3-5次</li>
+<li>强化简历AI项目经历</li>
+</ul>
+<h3>每日学习计划</h3>
+<h4>第22天：AI作品集准备</h4>
+<ul>
+<li><strong>学习内容</strong>：作品集结构设计、项目展示方法</li>
+<li><strong>推荐资源</strong>：</li>
+<li>AI产品作品集模板（中文）- 难度：★☆☆☆☆，时长：1小时</li>
+<li>《Building an AI PM Portfolio》（英文）- 难度：★☆☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>整理第三周实战项目文档</li>
+<li>设计作品集结构</li>
+</ul>
+<h4>第23天：AI PM面试题复习（模型理解）</h4>
+<ul>
+<li><strong>学习内容</strong>：模型理解类面试题</li>
+<li><strong>推荐资源</strong>：</li>
+<li>《AI产品经理面试指南》（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《AI PM Interview Questions》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>复习模型理解类面试题</li>
+<li>准备3-5个模型理解问题的答案</li>
+</ul>
+<h4>第24天：AI PM面试题复习（方案解析）</h4>
+<ul>
+<li><strong>学习内容</strong>：方案解析类面试题</li>
+<li><strong>推荐资源</strong>：</li>
+<li>产品方案设计技巧（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>《Solving AI Product Problems》（英文）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>复习方案解析类面试题</li>
+<li>练习拆解2-3个复杂AI产品问题</li>
+</ul>
+<h4>第25天：AI PM面试题复习（技术可行性）</h4>
+<ul>
+<li><strong>学习内容</strong>：技术可行性评估类面试题</li>
+<li><strong>推荐资源</strong>：</li>
+<li>技术可行性分析方法（中文资料）- 难度：★★☆☆☆，时长：1小时</li>
+<li>《Evaluating AI Feasibility》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>复习技术可行性评估方法</li>
+<li>准备2-3个可行性分析案例</li>
+</ul>
+<h4>第26天：AI PM面试题复习（评估指标）</h4>
+<ul>
+<li><strong>学习内容</strong>：评估指标类面试题</li>
+<li><strong>推荐资源</strong>：</li>
+<li>AI产品评估指标体系（中文）- 难度：★★☆☆☆，时长：2小时</li>
+<li>《AI Product Metrics》（英文）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>复习评估指标类面试题</li>
+<li>设计1-2个产品的评估指标体系</li>
+</ul>
+<h4>第27天：模拟面试</h4>
+<ul>
+<li><strong>学习内容</strong>：模拟面试技巧、反馈改进</li>
+<li><strong>推荐资源</strong>：</li>
+<li>模拟面试指南（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>《Mock Interview Techniques》（英文）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>进行2-3次模拟面试</li>
+<li>记录反馈并改进</li>
+</ul>
+<h4>第28天：简历优化与总结</h4>
+<ul>
+<li><strong>学习内容</strong>：AI项目简历强化、学习总结</li>
+<li><strong>推荐资源</strong>：</li>
+<li>简历优化技巧（中文视频）- 难度：★★☆☆☆，时长：1.5小时</li>
+<li>《AI PM Resume Tips》（英文）- 难度：★★☆☆☆，时长：1小时</li>
+<li><strong>学习任务</strong>：</li>
+<li>优化简历，强化AI项目经历</li>
+<li>完成AI产品作品集（PDF两份）</li>
+<li>总结一个月学习成果</li>
+<li>产出物：求职简历（AI项目强化版）、AI PM作品集</li>
+</ul>
+<h2>资源推荐列表</h2>
+<h3>基础概念类</h3>
+<table>
+<thead>
+<tr>
+<th>资源名称</th>
+<th>语言</th>
+<th>难度</th>
+<th>时长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>《人工智能极简史》</td>
+<td>中文</td>
+<td>★☆☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《Artificial Intelligence: A Modern Approach》</td>
+<td>英文</td>
+<td>★★☆☆☆</td>
+<td>1.5小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>吴恩达《机器学习》课程</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>视频</td>
+</tr>
+<tr>
+<td>3Blue1Brown《神经网络》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>1.5小时</td>
+<td>视频</td>
+</tr>
+</tbody>
+</table>
+<h3>技术应用类</h3>
+<table>
+<thead>
+<tr>
+<th>资源名称</th>
+<th>语言</th>
+<th>难度</th>
+<th>时长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>《自然语言处理入门》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《深度学习之计算机视觉》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《推荐系统实践》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>OpenAI Blog</td>
+<td>英文</td>
+<td>★★☆☆☆</td>
+<td>1小时</td>
+<td>文章</td>
+</tr>
+</tbody>
+</table>
+<h3>产品设计类</h3>
+<table>
+<thead>
+<tr>
+<th>资源名称</th>
+<th>语言</th>
+<th>难度</th>
+<th>时长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>《Designing AI》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《AI产品经理实战》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《数据产品经理修炼手册》</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+<tr>
+<td>《Build AI Products People Love》</td>
+<td>英文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>书籍</td>
+</tr>
+</tbody>
+</table>
+<h3>实践工具类</h3>
+<table>
+<thead>
+<tr>
+<th>资源名称</th>
+<th>语言</th>
+<th>难度</th>
+<th>时长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Figma教程</td>
+<td>中文</td>
+<td>★★☆☆☆</td>
+<td>2小时</td>
+<td>视频</td>
+</tr>
+<tr>
+<td>ChatGPT体验</td>
+<td>英文/中文</td>
+<td>★☆☆☆☆</td>
+<td>1小时</td>
+<td>工具</td>
+</tr>
+<tr>
+<td>文心一言体验</td>
+<td>中文</td>
+<td>★☆☆☆☆</td>
+<td>1小时</td>
+<td>工具</td>
+</tr>
+</tbody>
+</table>
+<h2>学习成果检验方式</h2>
+<h3>阶段性测试</h3>
+<ul>
+<li><strong>每周测试</strong>：每周末完成5-10道测试题，检验本周学习成果</li>
+<li><strong>案例分析</strong>：每周分析1-2个AI产品案例，撰写分析报告</li>
+<li><strong>实践任务</strong>：每周完成1个小型实践任务，如设计一个AI功能、撰写需求文档等</li>
+</ul>
+<h3>综合评估</h3>
+<ul>
+<li><strong>实践项目</strong>：完成一个完整的AI产品功能设计项目</li>
+<li><strong>知识地图</strong>：绘制个人AI知识地图，梳理所学知识点</li>
+<li><strong>能力自评</strong>：根据以下维度进行自我评估：</li>
+<li>AI基础概念理解程度</li>
+<li>AI产品思维建立情况</li>
+<li>AI产品设计能力</li>
+<li>与技术团队沟通能力</li>
+</ul>
+<h2>学习建议与注意事项</h2>
+<h3>学习建议</h3>
+<ol>
+<li><strong>循序渐进</strong>：不要急于求成，先建立基础认知，再深入应用</li>
+<li><strong>理论结合实践</strong>：每学习一个概念，尝试在实际产品中找到应用案例</li>
+<li><strong>主动思考</strong>：多问为什么，思考AI技术如何解决实际问题</li>
+<li><strong>持续关注</strong>：关注AI领域的最新动态和产品案例</li>
+</ol>
+<h3>注意事项</h3>
+<ol>
+<li><strong>避免过度技术化</strong>：作为产品经理，重点是理解AI的应用价值，而非深入算法细节</li>
+<li><strong>保持产品视角</strong>：始终从用户价值和商业价值出发思考AI应用</li>
+<li><strong>注重伦理和责任</strong>：AI产品设计要考虑伦理问题和社会影响</li>
+<li><strong>与技术团队协作</strong>：学会用技术团队能理解的语言沟通需求</li>
+</ol>
+<h2>学习进度跟踪表</h2>
+<table>
+<thead>
+<tr>
+<th>周数</th>
+<th>学习主题</th>
+<th>完成情况</th>
+<th>学习笔记</th>
+<th>实践任务</th>
+<th>测试成绩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一周</td>
+<td>AI基础概念与产品思维</td>
+<td>□ 完成 □ 进行中 □ 未开始</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>第二周</td>
+<td>核心AI技术与产品应用场景</td>
+<td>□ 完成 □ 进行中 □ 未开始</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>第三周</td>
+<td>AI产品设计与落地</td>
+<td>□ 完成 □ 进行中 □ 未开始</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>第四周</td>
+<td>实践与总结</td>
+<td>□ 完成 □ 进行中 □ 未开始</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>祝您学习愉快！</strong> 希望通过这个学习计划，您能够成为一名懂AI的优秀产品经理，在AI时代的产品领域中脱颖而出。</p>
+    </div>
+</body>
+</html>
