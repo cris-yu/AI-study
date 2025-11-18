@@ -3,58 +3,502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品经理AI学习计划</title>
+    <title>AI学习导师 - 专为产品经理打造的AI学习平台</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            opacity: 0.9;
         }
+
+        /* 容器样式 */
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 导航菜单 */
+        nav {
             background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-radius: 8px;
         }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .links {
+
+        nav ul {
+            display: flex;
             list-style: none;
             padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
         }
-        .links li {
-            margin: 10px 0;
+
+        nav li {
+            flex: 1;
+            min-width: 150px;
         }
-        .links a {
+
+        nav a {
             display: block;
-            padding: 15px;
-            background-color: #3498db;
-            color: white;
+            padding: 1rem;
+            text-align: center;
+            color: #333;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            border-radius: 8px;
         }
-        .links a:hover {
-            background-color: #2980b9;
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            color: #667eea;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* 资源网格 */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .resource-card h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .resource-card .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .resource-card .level {
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .level-beginner { background-color: #d4edda; color: #155724; }
+        .level-intermediate { background-color: #fff3cd; color: #856404; }
+        .level-advanced { background-color: #f8d7da; color: #721c24; }
+
+        /* 学习路径 */
+        .learning-path {
+            background-color: #f0f4ff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .learning-path h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .path-steps {
+            counter-reset: step;
+        }
+
+        .path-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .path-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .path-step h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* 测试区域 */
+        .test-section {
+            background-color: #fff8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .test-section h3 {
+            color: #ff8c42;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .test-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .test-card h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .test-card button {
+            background-color: #ff8c42;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .test-card button:hover {
+            background-color: #ff6b1a;
+        }
+
+        /* 进度跟踪 */
+        .progress-section {
+            background-color: #f0fff4;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .progress-section h3 {
+            color: #28a745;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #28a745;
+            transition: width 0.5s ease;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                min-width: auto;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>AI学习导师</h1>
+        <p>专为初级产品经理打造的AI技术学习全方位指导平台</p>
+    </header>
+
     <div class="container">
-        <h1>产品经理AI学习计划</h1>
-        <ul class="links">
-            <li><a href="AI学习计划首页.html">AI学习计划首页</a></li>
-            <li><a href="产品经理AI学习计划.html">产品经理AI学习计划</a></li>
-            <li><a href="第一周学习任务表.html">第一周学习任务表</a></li>
-            <li><a href="第二周学习任务表.html">第二周学习任务表</a></li>
-            <li><a href="第三周学习任务表.html">第三周学习任务表</a></li>
-            <li><a href="第四周学习任务表.html">第四周学习任务表</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#resources">学习资源</a></li>
+                <li><a href="#learning-paths">学习路径</a></li>
+                <li><a href="#assessment">成果检验</a></li>
+                <li><a href="#progress">进度跟踪</a></li>
+                <li><a href="#tasks">每周任务</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="card">
+            <h2>欢迎来到AI学习导师</h2>
+            <p>我是您的AI学习导师，将为您提供产品经理专属的AI技术学习指导。无论您是刚刚接触AI的初级产品经理，还是希望提升AI产品设计能力的进阶人士，这里都有适合您的学习资源和路径。</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="#learning-paths" style="background-color: #667eea; color: white; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">开始学习</a>
+                <a href="#resources" style="background-color: #f0f0f0; color: #333; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">浏览资源</a>
+            </div>
+        </section>
+
+        <section id="resources" class="card">
+            <h2>精选学习资源</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>AI产品经理入门宝典</h3>
+                    <div class="meta">
+                        <span class="level level-beginner">入门</span>
+                        <span>中文</span>
+                        <span>2小时</span>
+                    </div>
+                    <p>专为产品经理设计的AI入门指南，用产品语言解释AI概念，重点关注AI在产品中的应用价值。</p>
+                </div>
+                <div class="resource-card">
+                    <h3>吴恩达机器学习课程</h3>
+                    <div class="meta">
+                        <span class="level level-intermediate">中级</span>
+                        <span>中文</span>
+                        <span>10小时</span>
+                    </div>
+                    <p>经典的机器学习入门课程，适合产品经理了解AI核心技术原理，无需编程基础。</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Build AI Products People Love</h3>
+                    <div class="meta">
+                        <span class="level level-advanced">高级</span>
+                        <span>英文</span>
+                        <span>5小时</span>
+                    </div>
+                    <p>AI产品设计实战指南，包含大量真实案例分析，学习如何构建用户喜爱的AI产品。</p>
+                </div>
+                <div class="resource-card">
+                    <h3>AI产品案例分析集</h3>
+                    <div class="meta">
+                        <span class="level level-intermediate">中级</span>
+                        <span>中文</span>
+                        <span>3小时</span>
+                    </div>
+                    <p>精选国内外优秀AI产品案例，分析其产品设计思路、技术实现和商业价值。</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Prompt工程实战手册</h3>
+                    <div class="meta">
+                        <span class="level level-beginner">入门</span>
+                        <span>中文</span>
+                        <span>1.5小时</span>
+                    </div>
+                    <p>产品经理必备的Prompt工程技能，学习如何通过有效提示词提升AI工具使用效率。</p>
+                </div>
+                <div class="resource-card">
+                    <h3>AI产品需求文档模板</h3>
+                    <div class="meta">
+                        <span class="level level-intermediate">中级</span>
+                        <span>中文</span>
+                        <span>1小时</span>
+                    </div>
+                    <p>专业的AI产品PRD模板，包含AI产品特有的需求描述、评估指标和风险分析。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning-paths" class="card">
+            <h2>个性化学习路径</h2>
+            <div class="learning-path">
+                <h3>通用产品经理AI学习路径</h3>
+                <div class="path-steps">
+                    <div class="path-step">
+                        <div>
+                            <h4>基础概念阶段（1周）</h4>
+                            <p>学习AI基本概念、发展历程和核心术语，建立AI思维框架。</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div>
+                            <h4>核心技术阶段（2周）</h4>
+                            <p>了解机器学习、深度学习等核心技术原理，学习从产品视角评估AI技术。</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div>
+                            <h4>产品应用阶段（3周）</h4>
+                            <p>学习AI产品设计方法、开发流程和评估指标，进行实战项目练习。</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div>
+                            <h4>进阶提升阶段（4周+）</h4>
+                            <p>深入学习特定领域AI应用（如推荐系统、智能客服等），持续实践和复盘。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="learning-path">
+                <h3>推荐系统产品经理路径</h3>
+                <div class="path-steps">
+                    <div class="path-step">
+                        <div>
+                            <h4>推荐系统基础（1周）</h4>
+                            <p>了解推荐系统的基本原理、常用算法和评估指标。</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div>
+                            <h4>推荐系统产品设计（2周）</h4>
+                            <p>学习推荐系统产品的需求分析、功能设计和用户体验优化。</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div>
+                            <h4>推荐系统实战（2周）</h4>
+                            <p>完成一个推荐系统产品的PRD设计和原型制作。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="card">
+            <h2>学习成果检验</h2>
+            <div class="test-section">
+                <h3>基础概念测试</h3>
+                <div class="test-card">
+                    <h4>测试1：AI核心概念理解</h4>
+                    <p>评估您对AI、机器学习、深度学习等核心概念的理解程度。</p>
+                    <button>开始测试</button>
+                </div>
+                <div class="test-card">
+                    <h4>测试2：AI产品应用分析</h4>
+                    <p>通过实际案例分析，检验您将AI知识应用到产品决策中的能力。</p>
+                    <button>开始测试</button>
+                </div>
+            </div>
+            <div class="test-section">
+                <h3>技能评估</h3>
+                <div class="test-card">
+                    <h4>AI产品需求文档撰写</h4>
+                    <p>根据给定场景，撰写一份完整的AI产品需求文档，评估产品设计能力。</p>
+                    <button>开始评估</button>
+                </div>
+                <div class="test-card">
+                    <h4>AI技术可行性分析</h4>
+                    <p>针对特定产品需求，分析AI技术实现的可行性、成本和收益。</p>
+                    <button>开始评估</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="progress" class="card">
+            <h2>学习进度跟踪</h2>
+            <div class="progress-section">
+                <h3>总体学习进度</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 25%;"></div>
+                </div>
+                <p style="color: #666; font-size: 0.9rem;">已完成 25% 的学习内容</p>
+            </div>
+            <div class="learning-path">
+                <h3>本周学习目标</h3>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">✓ 完成AI基础概念学习</li>
+                    <li style="margin-bottom: 0.5rem;">✓ 学习机器学习核心术语</li>
+                    <li style="margin-bottom: 0.5rem;">□ 完成第一周测试题</li>
+                    <li style="margin-bottom: 0.5rem;">□ 整理学习笔记</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tasks" class="card">
+            <h2>每周学习任务表</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <a href="第一周学习任务表.html" style="display: block; background-color: #667eea; color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <h3 style="margin-bottom: 0.5rem;">第一周</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">AI基础概念</p>
+                </a>
+                <a href="第二周学习任务表.html" style="display: block; background-color: #764ba2; color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <h3 style="margin-bottom: 0.5rem;">第二周</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">AI产品方法论</p>
+                </a>
+                <a href="第三周学习任务表.html" style="display: block; background-color: #f093fb; color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <h3 style="margin-bottom: 0.5rem;">第三周</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">项目实战</p>
+                </a>
+                <a href="第四周学习任务表.html" style="display: block; background-color: #4facfe; color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <h3 style="margin-bottom: 0.5rem;">第四周</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">求职冲刺</p>
+                </a>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem;">
+            <p>© 2024 AI学习导师 | 专为初级产品经理打造的AI技术学习平台</p>
+        </footer>
     </div>
 </body>
 </html>

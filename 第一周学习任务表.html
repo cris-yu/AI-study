@@ -5,478 +5,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>产品经理AI学习计划 - 第一周任务表</title>
     <style>
-        /* 全局样式 - 深色主题 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #121212;
-            padding: 20px;
-        }
-
-        /* 返回按钮样式 - 深色主题 */
-        .back-button {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background: #2c2c2c;
-            color: #e0e0e0;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid #444;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .back-button:hover {
-            background: #3a3a3a;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .back-button i {
-            margin-right: 8px;
-        }
-
-        /* 容器样式 - 深色主题 */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            padding: 40px;
-        }
-
-        /* 标题样式 - 深色主题 */
-        h1 {
-            text-align: center;
-            color: #ffffff;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            font-weight: 700;
-        }
-
-        h2 {
-            color: #bb86fc;
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3700b3;
-            font-size: 2em;
-        }
-
-        h3 {
-            color: #03dac6;
-            margin: 30px 0 15px;
-            font-size: 1.5em;
-        }
-
-        h4 {
-            color: #ff5252;
-            margin: 20px 0 10px;
-            font-size: 1.2em;
-        }
-
-        /* 段落样式 - 深色主题 */
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 1.1em;
-            color: #e0e0e0;
-        }
-
-        /* 列表样式 - 深色主题 */
-        ul, ol {
-            margin-bottom: 15px;
-            margin-left: 25px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            font-size: 1.1em;
-            color: #e0e0e0;
-        }
-
-        /* 表格样式 - 深色主题 */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            font-size: 1em;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #333;
-        }
-
-        th {
-            background-color: #3700b3;
-            color: white;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #2a2a2a;
-        }
-
-        /* 分隔线 - 深色主题 */
-        hr {
-            border: none;
-            border-top: 1px solid #333;
-            margin: 30px 0;
-        }
-
-        /* 卡片样式 - 深色主题 */
-        .card {
-            background-color: #2a2a2a;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        /* 学习进度表 - 深色主题 */
-        .progress-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        .progress-table th {
-            background-color: #018786;
-        }
-
-        /* 学习任务样式 - 深色主题 */
-        .task {
-            background-color: #383838;
-            border-left: 4px solid #ffb300;
-            padding: 15px;
-            border-radius: 4px;
-            margin: 15px 0;
-        }
-
-        /* 页脚 - 深色主题 */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #888;
-            font-size: 0.9em;
-        }
-
-        /* 响应式设计 - 深色主题 */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.7em;
-            }
-
-            h3 {
-                font-size: 1.4em;
-            }
-
-            h4 {
-                font-size: 1.2em;
-            }
-
-            p, li {
-                font-size: 1em;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', Arial, sans-serif; line-height: 1.6; color: #e0e0e0; background-color: #121212; padding: 20px; }
+        .back-button { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2c2c2c; color: #e0e0e0; text-decoration: none; border-radius: 8px; border: 1px solid #444; transition: all 0.3s ease; font-weight: 500; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+        .back-button:hover { background: #3a3a3a; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); transform: translateY(-2px); }
+        .back-button i { margin-right: 8px; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: #1e1e1e; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); padding: 40px; }
+        h1 { text-align: center; color: #ffffff; margin-bottom: 30px; font-size: 2.5em; font-weight: 700; }
+        h2 { color: #bb86fc; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #3700b3; font-size: 2em; }
+        h3 { color: #03dac6; margin: 30px 0 15px; font-size: 1.5em; }
+        h4 { color: #ff5252; margin: 20px 0 10px; font-size: 1.2em; }
+        p { margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #e0e0e0; }
+        ul, ol { margin-bottom: 15px; margin-left: 25px; }
+        li { margin-bottom: 8px; font-size: 1.1em; color: #e0e0e0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 1em; }
+        th, td { padding: 12px; text-align: left; border: 1px solid #333; }
+        th { background-color: #3700b3; color: white; font-weight: bold; }
+        tr:nth-child(even) { background-color: #2a2a2a; }
+        hr { border: none; border-top: 1px solid #333; margin: 30px 0; }
+        .card { background-color: #2a2a2a; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+        .progress-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .progress-table th { background-color: #018786; }
+        .task { background-color: #383838; border-left: 4px solid #ffb300; padding: 15px; border-radius: 4px; margin: 15px 0; }
+        footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; color: #888; font-size: 0.9em; }
+        @media (max-width: 768px) { .container { padding: 20px; } h1 { font-size: 2em; } h2 { font-size: 1.7em; } h3 { font-size: 1.4em; } h4 { font-size: 1.2em; } p, li { font-size: 1em; } table { font-size: 0.9em; } th, td { padding: 8px; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 返回按钮 -->
         <a href="index.html" class="back-button">
             <i>←</i> 返回首页
         </a>
         <h1>产品经理AI学习计划 - 第一周任务表</h1>
-<h2>本周学习目标</h2>
-<ul>
-<li>理解AI的基本概念和发展历程</li>
-<li>建立产品经理的AI思维框架</li>
-<li>掌握AI相关的核心术语和概念</li>
-<li>学会从产品视角评估AI技术的应用价值</li>
-</ul>
-<h2>每日学习任务表</h2>
-<table>
-<thead>
-<tr>
-<th>日期</th>
-<th>时间段</th>
-<th>具体学习任务</th>
-<th>预计时长</th>
-<th>优先级</th>
-<th>完成状态</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>周一</strong></td>
-<td>上午</td>
-<td>阅读《人工智能极简史》，学习AI定义、发展历程</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>学习《Artificial Intelligence: A Modern Approach》第一章</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>绘制AI发展时间轴，标注重要里程碑</td>
-<td>0.5小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周二</strong></td>
-<td>上午</td>
-<td>学习吴恩达《机器学习》课程第一周（监督学习部分）</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>阅读《Hands-On Machine Learning》第一章</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>用产品语言解释三种机器学习类型的区别</td>
-<td>0.5小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周三</strong></td>
-<td>上午</td>
-<td>观看3Blue1Brown《神经网络》视频系列</td>
-<td>1.5小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>阅读《Deep Learning》第一章</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>用比喻解释神经网络的工作原理</td>
-<td>0.5小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周四</strong></td>
-<td>上午</td>
-<td>阅读《AI产品经理入门宝典》第二章（AI术语部分）</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>浏览AI Glossary by Google，补充术语理解</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>创建个人AI术语表（至少20个核心术语）</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周五</strong></td>
-<td>上午</td>
-<td>阅读《人工智能伦理》，学习AI伦理原则</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>弹性时间：复习本周内容或处理突发工作</td>
-<td>2小时</td>
-<td>🟢 低</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>分析1个AI伦理问题案例（如算法偏见）</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周六</strong></td>
-<td>上午</td>
-<td>阅读《AI超级思维》，学习产品视角看AI</td>
-<td>2小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>阅读《Build AI Products People Love》第一章</td>
-<td>1.5小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>撰写短文：《产品经理为什么需要学习AI》</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td><strong>周日</strong></td>
-<td>上午</td>
-<td>完成本周测试题（共3题）</td>
-<td>1小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>下午</td>
-<td>整理本周学习笔记，形成知识体系</td>
-<td>2小时</td>
-<td>🔴 高</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-<tr>
-<td></td>
-<td>晚上</td>
-<td>确定下周重点学习方向，制定下周计划</td>
-<td>1小时</td>
-<td>🟠 中</td>
-<td>□ 完成 □ 进行中 □ 未开始</td>
-</tr>
-</tbody>
-</table>
-<h2>周末复盘区域</h2>
-<h3>学习收获</h3>
-<ul>
-<li>[ ] 请记录本周学习的主要收获...</li>
-</ul>
-<h3>知识盲区</h3>
-<ul>
-<li>[ ] 请记录本周发现的知识盲区...</li>
-</ul>
-<h3>改进计划</h3>
-<ul>
-<li>[ ] 请记录下周的改进计划...</li>
-</ul>
-<h2>本周学习资源汇总</h2>
-<h3>基础概念类</h3>
-<table>
-<thead>
-<tr>
-<th>资源名称</th>
-<th>语言</th>
-<th>难度</th>
-<th>时长</th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>《人工智能极简史》</td>
-<td>中文</td>
-<td>★☆☆☆☆</td>
-<td>2小时</td>
-<td>书籍</td>
-</tr>
-<tr>
-<td>《Artificial Intelligence: A Modern Approach》</td>
-<td>英文</td>
-<td>★★☆☆☆</td>
-<td>1.5小时</td>
-<td>书籍</td>
-</tr>
-<tr>
-<td>吴恩达《机器学习》课程</td>
-<td>中文</td>
-<td>★★☆☆☆</td>
-<td>2小时</td>
-<td>视频</td>
-</tr>
-<tr>
-<td>3Blue1Brown《神经网络》</td>
-<td>中文</td>
-<td>★★☆☆☆</td>
-<td>1.5小时</td>
-<td>视频</td>
-</tr>
-</tbody>
-</table>
-<h2>学习建议</h2>
-<ol>
-<li>每天保持2-3小时的学习时间，避免过度疲劳</li>
-<li>优先完成高优先级任务，确保核心知识点的掌握</li>
-<li>利用弹性时间处理突发工作或复习已学内容</li>
-<li>注重实践任务，将理论知识应用到实际产品场景中</li>
-<li>定期复盘，及时调整学习计划</li>
-</ol>
-<h2>本周测试题</h2>
-<ol>
-<li>解释AI、机器学习、深度学习三者的关系</li>
-<li>用产品语言描述监督学习的工作流程</li>
-<li>列举3个AI产品设计中需要考虑的伦理问题</li>
-</ol>
+        <h2>本周学习目标</h2>
+        <ul>
+            <li>理解AI的基本概念和发展历程</li>
+            <li>建立产品经理的AI思维框架</li>
+            <li>掌握AI相关的核心术语和概念</li>
+            <li>学会从产品视角评估AI技术的应用价值</li>
+        </ul>
+        <h2>每日学习任务表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>时间段</th>
+                    <th>具体学习任务</th>
+                    <th>预计时长</th>
+                    <th>优先级</th>
+                    <th>完成状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>周一</strong></td>
+                    <td>上午</td>
+                    <td>阅读《人工智能极简史》，学习AI定义、发展历程</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>学习《Artificial Intelligence: A Modern Approach》第一章</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>绘制AI发展时间轴，标注重要里程碑</td>
+                    <td>0.5小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周二</strong></td>
+                    <td>上午</td>
+                    <td>学习吴恩达《机器学习》课程第一周（监督学习部分）</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>阅读《Hands-On Machine Learning》第一章</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>用产品语言解释三种机器学习类型的区别</td>
+                    <td>0.5小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周三</strong></td>
+                    <td>上午</td>
+                    <td>观看3Blue1Brown《神经网络》视频系列</td>
+                    <td>1.5小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>阅读《Deep Learning》第一章</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>用比喻解释神经网络的工作原理</td>
+                    <td>0.5小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周四</strong></td>
+                    <td>上午</td>
+                    <td>阅读《AI产品经理入门宝典》第二章（AI术语部分）</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>浏览AI Glossary by Google，补充术语理解</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>创建个人AI术语表（至少20个核心术语）</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周五</strong></td>
+                    <td>上午</td>
+                    <td>阅读《人工智能伦理》，学习AI伦理原则</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>弹性时间：复习本周内容或处理突发工作</td>
+                    <td>2小时</td>
+                    <td>🟢 低</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>分析1个AI伦理问题案例（如算法偏见）</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周六</strong></td>
+                    <td>上午</td>
+                    <td>阅读《AI超级思维》，学习产品视角看AI</td>
+                    <td>2小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>阅读《Build AI Products People Love》第一章</td>
+                    <td>1.5小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>撰写短文：《产品经理为什么需要学习AI》</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td><strong>周日</strong></td>
+                    <td>上午</td>
+                    <td>完成本周测试题（共3题）</td>
+                    <td>1小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>下午</td>
+                    <td>整理本周学习笔记，形成知识体系</td>
+                    <td>2小时</td>
+                    <td>🔴 高</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>晚上</td>
+                    <td>确定下周重点学习方向，制定下周计划</td>
+                    <td>1小时</td>
+                    <td>🟠 中</td>
+                    <td>□ 完成 □ 进行中 □ 未开始</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>周末复盘区域</h2>
+        <h3>学习收获</h3>
+        <ul>
+            <li>[ ] 请记录本周学习的主要收获...</li>
+        </ul>
+        <h3>知识盲区</h3>
+        <ul>
+            <li>[ ] 请记录本周发现的知识盲区...</li>
+        </ul>
+        <h3>改进计划</h3>
+        <ul>
+            <li>[ ] 请记录下周的改进计划...</li>
+        </ul>
+        <h2>本周学习资源汇总</h2>
+        <h3>基础概念类</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>资源名称</th>
+                    <th>语言</th>
+                    <th>难度</th>
+                    <th>时长</th>
+                    <th>类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>《人工智能极简史》</td>
+                    <td>中文</td>
+                    <td>★☆☆☆☆</td>
+                    <td>2小时</td>
+                    <td>书籍</td>
+                </tr>
+                <tr>
+                    <td>《Artificial Intelligence: A Modern Approach》</td>
+                    <td>英文</td>
+                    <td>★★☆☆☆</td>
+                    <td>1.5小时</td>
+                    <td>书籍</td>
+                </tr>
+                <tr>
+                    <td>吴恩达《机器学习》课程</td>
+                    <td>中文</td>
+                    <td>★★☆☆☆</td>
+                    <td>2小时</td>
+                    <td>视频</td>
+                </tr>
+                <tr>
+                    <td>3Blue1Brown《神经网络》</td>
+                    <td>中文</td>
+                    <td>★★☆☆☆</td>
+                    <td>1.5小时</td>
+                    <td>视频</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>学习建议</h2>
+        <ol>
+            <li>每天保持2-3小时的学习时间，避免过度疲劳</li>
+            <li>优先完成高优先级任务，确保核心知识点的掌握</li>
+            <li>利用弹性时间处理突发工作或复习已学内容</li>
+            <li>注重实践任务，将理论知识应用到实际产品场景中</li>
+            <li>定期复盘，及时调整学习计划</li>
+        </ol>
+        <h2>本周测试题</h2>
+        <ol>
+            <li>解释AI、机器学习、深度学习三者的关系</li>
+            <li>用产品语言描述监督学习的工作流程</li>
+            <li>列举3个AI产品设计中需要考虑的伦理问题</li>
+        </ol>
     </div>
 </body>
 </html>
